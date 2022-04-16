@@ -1,16 +1,19 @@
-package com.priyo.videorecoder
+package com.priyo.videorecoder.view
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.NavHostFragment
+import com.priyo.videorecoder.R
+import com.priyo.videorecoder.model.repo.VideoRepository
+import com.priyo.videorecoder.viewmodel.VideoViewModel
+import com.priyo.videorecoder.viewmodel.VideoViewModelProviderFactory
 import com.priyo.videorecoder.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

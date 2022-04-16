@@ -1,10 +1,12 @@
-package com.priyo.videorecoder
+package com.priyo.videorecoder.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.priyo.videorecoder.model.data.VideoDetails
+import com.priyo.videorecoder.model.repo.VideoRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

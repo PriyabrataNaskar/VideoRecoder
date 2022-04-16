@@ -1,4 +1,4 @@
-package com.priyo.videorecoder
+package com.priyo.videorecoder.view
 
 import android.Manifest
 import android.content.ContentValues
@@ -20,12 +20,13 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.PermissionChecker
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.priyo.videorecoder.R
+import com.priyo.videorecoder.viewmodel.VideoViewModel
 import com.priyo.videorecoder.databinding.FragmentSecondBinding
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -139,8 +140,10 @@ class SecondFragment : Fragment() {
             }
         }
 
-        val mediaStoreOutputOptions: MediaStoreOutputOptions = MediaStoreOutputOptions
-            .Builder(requireActivity().contentResolver, MediaStore.Video.Media.EXTERNAL_CONTENT_URI)
+        val mediaStoreOutputOptions: MediaStoreOutputOptions = MediaStoreOutputOptions.Builder(
+            requireActivity().contentResolver,
+            MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+        )
             .setContentValues(contentValues)
             .build()
 

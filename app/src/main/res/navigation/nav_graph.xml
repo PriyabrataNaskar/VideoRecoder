@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.priyo.videorecoder.FirstFragment"
+        android:name="com.priyo.videorecoder.view.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.priyo.videorecoder.SecondFragment"
+        android:name="com.priyo.videorecoder.view.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
@@ -35,7 +35,7 @@
 
     <fragment
         android:id="@+id/PlayerFragment"
-        android:name="com.priyo.videorecoder.PlayerFragment"
+        android:name="com.priyo.videorecoder.view.PlayerFragment"
         android:label="@string/player_fragment_label"
         tools:layout="@layout/fragment_player">
 

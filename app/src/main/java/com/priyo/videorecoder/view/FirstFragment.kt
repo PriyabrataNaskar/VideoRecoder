@@ -1,4 +1,4 @@
-package com.priyo.videorecoder
+package com.priyo.videorecoder.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,10 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.priyo.videorecoder.*
 import com.priyo.videorecoder.databinding.FragmentFirstBinding
-
+import com.priyo.videorecoder.model.data.VideoDetails
+import com.priyo.videorecoder.viewmodel.VideoViewModel
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -43,33 +45,6 @@ class FirstFragment : Fragment() {
         viewModel = (activity as MainActivity).viewModel
 
         observeLiveData()
-        /**
-        val allVideos: ArrayList<videoContent> = MediaFacer
-        .withVideoContex(activity)
-        .getAllVideoContent(VideoGet.externalContentUri)
-        Toast.makeText(activity, allVideos.size.toString(), Toast.LENGTH_LONG).show()
-        Log.e("Videos", allVideos.lastIndex.toString())
-
-        val list: MutableList<VideoDetails> = mutableListOf()
-
-        //add all the videos to a list
-        lifecycleScope.launch {
-        for (video in allVideos) {
-        val videoDetails = VideoDetails(
-        videoId = video.videoId,
-        videoName = video.videoName,
-        path = video.path,
-        videoDuration = video.videoDuration,
-        videoSize = video.videoSize,
-        AssetFileStringUri = video.assetFileStringUri,
-        artist = video.artist
-        )
-        list.add(videoDetails)
-        }
-        setRecyclerView(list)
-        }
-        Toast.makeText(requireContext(), allVideos.size.toString(), Toast.LENGTH_SHORT).show()
-         **/
 
         binding.fab.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)

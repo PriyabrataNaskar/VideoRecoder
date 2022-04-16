@@ -1,20 +1,14 @@
-package com.priyo.videorecoder
+package com.priyo.videorecoder.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.source.DefaultMediaSourceFactory
-import com.google.android.exoplayer2.source.MediaSourceFactory
-import com.google.android.exoplayer2.source.ProgressiveMediaSource
-import com.google.android.exoplayer2.upstream.DefaultDataSource
-import com.google.android.exoplayer2.util.Util
-import com.priyo.videorecoder.databinding.FragmentFirstBinding
+import com.priyo.videorecoder.viewmodel.VideoViewModel
 import com.priyo.videorecoder.databinding.FragmentPlayerBinding
-
 
 /**
  * A simple [Fragment] subclass.

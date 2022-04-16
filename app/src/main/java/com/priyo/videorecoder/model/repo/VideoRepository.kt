@@ -1,9 +1,10 @@
-package com.priyo.videorecoder
+package com.priyo.videorecoder.model.repo
 
 import android.content.Context
 import com.CodeBoy.MediaFacer.MediaFacer
 import com.CodeBoy.MediaFacer.VideoGet
 import com.CodeBoy.MediaFacer.mediaHolders.videoContent
+import com.priyo.videorecoder.model.data.VideoDetails
 import java.util.ArrayList
 
 /**
@@ -16,8 +17,7 @@ class VideoRepository(context: Context) {
     }
 
     suspend fun getAllVideos(): List<VideoDetails> {
-        val allVideos: ArrayList<videoContent> = MediaFacer
-            .withVideoContex(context)
+        val allVideos: ArrayList<videoContent> = MediaFacer.withVideoContex(context)
             .getAllVideoContent(VideoGet.externalContentUri)
 
         val list: MutableList<VideoDetails> = mutableListOf()

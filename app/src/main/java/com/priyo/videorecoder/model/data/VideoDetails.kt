@@ -1,4 +1,4 @@
-package com.priyo.videorecoder
+package com.priyo.videorecoder.model.data
 
 /**
  * Created by Priyabrata Naskar on 15-04-2022.

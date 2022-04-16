@@ -1,4 +1,4 @@
-package com.priyo.videorecoder
+package com.priyo.videorecoder.view
 
 import android.content.Context
 import android.content.Intent
@@ -11,11 +11,10 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.priyo.videorecoder.R
+import com.priyo.videorecoder.model.data.VideoDetails
 import com.priyo.videorecoder.databinding.VideoItemBinding
-import kotlin.time.Duration.Companion.microseconds
 import kotlin.time.Duration.Companion.milliseconds
-import kotlin.time.Duration.Companion.minutes
-import kotlin.time.Duration.Companion.seconds
 
 /**
  * Created by Priyabrata Naskar on 15-04-2022.
@@ -46,7 +45,8 @@ class VideoAdapter(private val mVideoDetailsData: List<VideoDetails>, mContext: 
         holder.bindTo(currentVideoDetails)
     }
 
-    inner class ViewHolder(binding: VideoItemBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener{
+    inner class ViewHolder(binding: VideoItemBinding) : RecyclerView.ViewHolder(binding.root),
+        View.OnClickListener {
 
         // Member Variables for the TextViews
         private val mVideoTitleText: TextView
@@ -83,17 +83,6 @@ class VideoAdapter(private val mVideoDetailsData: List<VideoDetails>, mContext: 
             if (view.id == itemView.id) {
                 // Create an nav direction with a destination
                 // Add the news details to the nav direction
-                    /** Handle Navigation
-                val action = NewsListFragmentDirections.actionNewsListFragmentToNewsDetailsFragment(
-                    authorName = newsAuthorName,
-                    newsTitle = newsTitle,
-                    newsDescription = newsDescription,
-                    newsImageResource = newsImageResource,
-                    newsPublishTime = newsPublishTime,
-                    content = content
-                )
-                view.findNavController().navigate(action)
-                **/
 
                 val action = FirstFragmentDirections.actionFirstFragmentToPlayerFragment(videoPath = video.AssetFileStringUri.toString())
                 view.findNavController().navigate(action)
@@ -101,16 +90,6 @@ class VideoAdapter(private val mVideoDetailsData: List<VideoDetails>, mContext: 
                 val shareIntent = Intent(Intent.ACTION_SEND)
 
                 //Intent shareIntent = new Intent();
-                /**
-                shareIntent.type = "text/plain"
-                shareIntent.putExtra(
-                    Intent.EXTRA_TEXT,
-                    "$newsTitle \nDescription:$newsDescription \nby- $newsAuthorName $newsImageResource"
-                )
-                //shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                view.context
-                    .startActivity(Intent.createChooser(shareIntent, "Share News With"))
-                **/
             }
         }
 
@@ -118,7 +97,8 @@ class VideoAdapter(private val mVideoDetailsData: List<VideoDetails>, mContext: 
             mVideoTitleText.text = currentVideo.videoName
 
             // Load the images into the ImageView using the Glide library.
-            Glide.with(mContext).load(currentVideo.AssetFileStringUri).placeholder(R.drawable.placeholder_image).centerCrop().into(mVideoImage)
+            Glide.with(mContext)
+                .load(currentVideo.AssetFileStringUri).placeholder(R.drawable.placeholder_image).centerCrop().into(mVideoImage)
             mArtistName.text = currentVideo.artist
             mVideoDuration.text = (currentVideo.videoDuration.milliseconds).toString()
             mVideoSize.text = (currentVideo.videoSize/(1024*1024)).toString()+ " MB"
