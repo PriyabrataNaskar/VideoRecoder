@@ -6,13 +6,15 @@ A MVVM architecture based Video Recorder in android, developed with Kotlin, Retr
 <img src="https://github.com/PriyabrataNaskar/VideoRecoder/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_eagle.png" alt="App Logo" width="300"/>
 
 ## In Eagle Eye you can Record New Videos using CameraX API, Play Videos, View Videos in Recycler View
- 
+
 ### In this Video Recorder - Eagle Eye You can : 
 
 - Skim through Recorded Videos in a RecyclerView
 - Open Each Videos, Play in Exo Player, control videos using different controls
 - See a nice animation when there is no video
 - Record Videos using CameraX API
+
+View The app in video [here]()
 
 ### I'm using 
 
