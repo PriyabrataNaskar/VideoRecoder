@@ -16,6 +16,8 @@ A MVVM architecture based Video Recorder in android, developed with Kotlin, Retr
 
 View The app in video [here]()
 
+Download APK [here](https://github.com/PriyabrataNaskar/VideoRecoder/blob/master/apk/app-debug.apk)
+
 ### I'm using 
 
 - Navigation Components for navigating between fragments
