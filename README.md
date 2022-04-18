@@ -14,7 +14,7 @@ A MVVM architecture based Video Recorder in android, developed with Kotlin, Retr
 - See a nice animation when there is no video
 - Record Videos using CameraX API
 
-View The app in video [here]()
+View The app in video [here](https://drive.google.com/file/d/15M2U0y2I0iju-CAsHjZWNoTm1KVydoy-/view?usp=sharing)
 
 Download APK [here](https://github.com/PriyabrataNaskar/VideoRecoder/blob/master/apk/app-debug.apk)
 
